@@ -8,13 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
 @prefix interval: <http://reference.data.gov.uk/def/intervals/>.
-@prefix sdm: <http://purl.org/ontology/sdm#>. ## Change this to a valid namespace
 
+## 
+## Use relative URI patterns instead
+# @prefix sdm: <http://purl.org/ontology/sdm#>. ## Change this to a valid namespace
+##
+@prefix sdm: <#> .
+ 
 ####################
 # Ontology Metadata
 ####################
 
-<http://purl.org/ontology/sdm#> 
+sdm:
 	a owl:Ontology;
 	owl:versionInfo "0.1";
 	rdfs:comment "A vocabulary to represent SPARQL endpoint metadata."@en;
@@ -118,10 +123,3 @@ sdm:mirror a owl:DatatypeProperty, rdf:Property;
 	rdfs:range xsd:anyURI;
 	rdfs:comment "URI of a mirror of the endpoint service"@en;
 	rdfs:isDefinedBy <http://purl.org/ontology/sdm> .
-
-	
-
-
-  		
-
-	
