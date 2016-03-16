@@ -8,25 +8,25 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
 @prefix interval: <http://reference.data.gov.uk/def/intervals/>.
-
-## 
-## Use relative URI patterns instead
-# @prefix sdm: <http://purl.org/ontology/sdm#>. ## Change this to a valid namespace
-##
-@prefix sdm: <#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#>.
+@prefix schema: <http://schema.org/>.
+@prefix sdm: <https://w3id.org/vocab/sdm#> .
  
 ####################
 # Ontology Metadata
 ####################
 
-sdm:
-	a owl:Ontology;
-	owl:versionInfo "0.1";
+<https://w3id.org/vocab/sdm>
+	a owl:Ontology, voaf:vocabulary;
+	owl:versionInfo "v0.1";
 	rdfs:comment "A vocabulary to represent SPARQL endpoint metadata."@en;
+	dct:description "A small vocabulary for representing SPARQL endpoint metadata on the web"@en ;
 	dct:title "SPARQL endpoint metadata"@en;
 	dct:issued "2013-10-14"^^xsd:date;
 	dct:modified "2013-10-15"^^xsd:date;
-	dct:description "A vocabulary to represent SPARQL endpoint metadata."@en;
+	dct:modified "2016-03-16"^^xsd:date;
+	dct:creator [foaf:name "Ghislain Auguste Atemezing"; rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ; foaf:homepage <http://www.atemezing.org>] ;
+	dct:contributor [foaf:name "Kingsley Idehen"; schema:affiliation[foaf:homepage <http://www.openlinksw.com>; foaf:name "OpenLink Software"]]  ;
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> .
 
 ##########
