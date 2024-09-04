@@ -12,6 +12,7 @@
 @prefix schema: <http://schema.org/>.
 @prefix sdm: <https://w3id.org/vocab/sdm#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 ####################
 # Ontology Metadata
@@ -21,11 +22,14 @@
 	a owl:Ontology, voaf:vocabulary;
 	owl:versionInfo "v0.1";
 	rdfs:comment "A vocabulary to represent SPARQL endpoint metadata."@en;
+	vann:preferredNamespacePrefix "sdm";
+        vann:preferredNamespaceUri <https://w3id.org/vocab/sdm#> ;
 	dct:description "A small vocabulary for representing SPARQL endpoint metadata on the web"@en ;
 	dct:title "SPARQL endpoint metadata"@en;
 	dct:issued "2013-10-14"^^xsd:date;
 	dct:modified "2013-10-15"^^xsd:date;
 	dct:modified "2016-03-16"^^xsd:date;
+	dct:modified "2024-09-04"^^xsd:date;
 	dct:creator [foaf:name "Ghislain Auguste Atemezing"; rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ; foaf:homepage <http://www.atemezing.org>] ;
 	dct:contributor [foaf:name "Kingsley Idehen"; schema:affiliation[foaf:homepage <http://www.openlinksw.com>; foaf:name "OpenLink Software"]]  ;
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> .
