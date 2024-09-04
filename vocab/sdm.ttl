@@ -13,6 +13,7 @@
 @prefix sdm: <https://w3id.org/vocab/sdm#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ####################
 # Ontology Metadata
@@ -20,10 +21,18 @@
 
 <https://w3id.org/vocab/sdm>
 	a owl:Ontology, voaf:vocabulary;
-	owl:versionInfo "v0.1";
+	owl:versionInfo "v0.2";
+	dct:description "A vocabulary to represent SPARQL endpoint medatada"@en ;
+	skos:changeNote """" Revision 2024-09-03:
+        - Added vann metadata properties
+		- updated version info
+		- updated modified  date
+		- fixed a typo in the language tag @fr to be @en
+
+	   """";
 	rdfs:comment "A vocabulary to represent SPARQL endpoint metadata."@en;
 	vann:preferredNamespacePrefix "sdm";
-        vann:preferredNamespaceUri <https://w3id.org/vocab/sdm#> ;
+    vann:preferredNamespaceUri <https://w3id.org/vocab/sdm#> ;
 	dct:description "A small vocabulary for representing SPARQL endpoint metadata on the web"@en ;
 	dct:title "SPARQL endpoint metadata"@en;
 	dct:issued "2013-10-14"^^xsd:date;
@@ -40,7 +49,7 @@
 
 sdm:EndPointFeatureExtension a owl:Class;
 	a rdfs:Class;
-	rdfs:label "EndPoint feature extension"@fr;
+	rdfs:label "EndPoint feature extension"@en;
 	rdfs:subClassOf sd:Feature;
 	rdfs:comment "Principal class extending the sd:Feature for providing more metadata on an endpoint service. "@en;
 	.
