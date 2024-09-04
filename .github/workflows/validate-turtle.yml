@@ -23,4 +23,5 @@ jobs:
 
       - name: Find and validate Turtle files
         run: |
+          cd vocab
           find . -name "*.ttl" -exec rapper -i turtle -c {} \;
