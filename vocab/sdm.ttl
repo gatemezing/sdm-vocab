@@ -34,7 +34,7 @@
 	vann:preferredNamespacePrefix "sdm";
     vann:preferredNamespaceUri <https://w3id.org/vocab/sdm#> ;
 	dct:description "A small vocabulary for representing SPARQL endpoint metadata on the web"@en ;
-	dct:title "SPARQL endpoint metadata"@en;
+	dct:title "SPARQL endpoint metadata"@en .
 	dct:issued "2013-10-14"^^xsd:date;
 	dct:modified "2013-10-15"^^xsd:date;
 	dct:modified "2016-03-16"^^xsd:date;
