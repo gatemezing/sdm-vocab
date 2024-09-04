@@ -1,0 +1,26 @@
+name: Validate Turtle Files
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Raptor2 for Turtle validation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y raptor2-utils
+
+      - name: Find and validate Turtle files
+        run: |
+          find . -name "*.ttl" -exec rapper -i turtle -c {} \;
