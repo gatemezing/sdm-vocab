@@ -50,7 +50,7 @@
 sdm:EndPointFeatureExtension a owl:Class;
 	a rdfs:Class;
 	rdfs:label "EndPoint feature extension"@en;
-	rdfs:subClassOf sd:Feature;
+	rdfs:subClassOf sd:Feature. 
 	rdfs:comment "Principal class extending the sd:Feature for providing more metadata on an endpoint service. "@en;
 	.
 
