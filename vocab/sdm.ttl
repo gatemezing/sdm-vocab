@@ -29,7 +29,7 @@
 		- updated modified  date
 		- fixed a typo in the language tag @fr to be @en
 
-	   """";
+	   """;
 	rdfs:comment "A vocabulary to represent SPARQL endpoint metadata."@en;
 	vann:preferredNamespacePrefix "sdm";
     vann:preferredNamespaceUri <https://w3id.org/vocab/sdm#> ;
