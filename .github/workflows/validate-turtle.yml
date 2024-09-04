@@ -24,4 +24,14 @@ jobs:
       - name: Find and validate Turtle files
         run: |
           cd vocab
-          find . -name "*.ttl" -exec rapper -i turtle -c {} \;
+          find . -name "*.ttl" -exec rapper -i turtle -c {} \; > validation.log 2>&1
+          cat validation.log  # Display the contents of the log in the GitHub Actions console
+        continue-on-error: true  # Ensure workflow doesn't stop immediately on failure
+
+      - name: Upload validation log if errors occur
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: validation-log
+          path: validation.log
+          
